@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import junit.framework.Assert;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings({ "deprecation", "unused" })
 public class TasksTest {
 	
 	public WebDriver acessarAplicacao() throws MalformedURLException {
@@ -54,30 +54,30 @@ public class TasksTest {
 		}
 	}
 	
-	// @SuppressWarnings("deprecation")
-	// @Test
-	// public void naoDeveSalvarTarefaSemDescricao() throws MalformedURLException {
-	// 	WebDriver driver = acessarAplicacao();
-	// 	try {
+	@SuppressWarnings("deprecation")
+	@Test
+	public void naoDeveSalvarTarefaSemDescricao() throws MalformedURLException {
+		WebDriver driver = acessarAplicacao();
+		try {
 			
 		
-	// 	    // Clicar em add Todo
-	// 		driver.findElement(By.id("addTodo")).click();
+		    // Clicar em add Todo
+			driver.findElement(By.id("addTodo")).click();
 			
-	// 		// escrever a data
-	// 		driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
+			// escrever a data
+			driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
 			
-	// 		// clicar em salvar
-	// 		driver.findElement(By.id("saveButton")).click();
+			// clicar em salvar
+			driver.findElement(By.id("saveButton")).click();
 			
-	// 		// validar mensagem de sucesso
-	// 		String message = driver.findElement(By.id("message")).getText();
-	// 		Assert.assertEquals("Fill the task description", message);
-	// 	} finally {
-	// 		//fecha navegador
-	// 		driver.quit();
-	// 	}
-	// }
+			// validar mensagem de sucesso
+			String message = driver.findElement(By.id("message")).getText();
+			Assert.assertEquals("Fill the task description", message);
+		} finally {
+			//fecha navegador
+			driver.quit();
+		}
+	}
 	
 	@SuppressWarnings("deprecation")
 	@Test
