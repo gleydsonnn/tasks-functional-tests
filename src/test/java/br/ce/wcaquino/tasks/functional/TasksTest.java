@@ -104,31 +104,31 @@ public class TasksTest {
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
-	@Test
-	public void deveSalvarTarefaComDataPassada() throws MalformedURLException {
-		WebDriver driver = acessarAplicacao();
-		try {
+	// @SuppressWarnings("deprecation")
+	// @Test
+	// public void deveSalvarTarefaComDataPassada() throws MalformedURLException {
+	// 	WebDriver driver = acessarAplicacao();
+	// 	try {
 			
 		
-		    // Clicar em add Todo
-			driver.findElement(By.id("addTodo")).click();
+	// 	    // Clicar em add Todo
+	// 		driver.findElement(By.id("addTodo")).click();
 		
-			// Escrever a descricao
-			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
+	// 		// Escrever a descricao
+	// 		driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
 			
-			// escrever a data
-			driver.findElement(By.id("dueDate")).sendKeys("10/10/2010");
+	// 		// escrever a data
+	// 		driver.findElement(By.id("dueDate")).sendKeys("10/10/2010");
 			
-			// clicar em salvar
-			driver.findElement(By.id("saveButton")).click();
+	// 		// clicar em salvar
+	// 		driver.findElement(By.id("saveButton")).click();
 			
-			// validar mensagem de sucesso
-			String message = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Due date must not be in past", message);
-		} finally {
-			//fecha navegador
-			driver.quit();
-		}
-	}
+	// 		// validar mensagem de sucesso
+	// 		String message = driver.findElement(By.id("message")).getText();
+	// 		Assert.assertEquals("Due date must not be in past", message);
+	// 	} finally {
+	// 		//fecha navegador
+	// 		driver.quit();
+	// 	}
+	// }
 }
