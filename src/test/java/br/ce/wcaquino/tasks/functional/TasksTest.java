@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -48,7 +49,8 @@ public class TasksTest {
 			driver.findElement(By.id("saveButton")).click();
 			
 			// validar mensagem de sucesso
-			String message = driver.findElement(By.id("message")).getText();
+			WebElement message = driver.findElement(By.id("message"));
+			String text = message.getText();
 			Assert.assertEquals("Successo!", message);
 		} finally {
 			//fecha navegador
