@@ -13,7 +13,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import junit.framework.Assert;
 
-@SuppressWarnings({ "deprecation", "unused" })
+
+@SuppressWarnings({ "unused", "deprecation" })
 public class TasksTest {
 	
 	public WebDriver acessarAplicacao() throws MalformedURLException {
@@ -25,6 +26,7 @@ public class TasksTest {
 		return driver;
 			
 	}
+
 
 	@SuppressWarnings("deprecation")
 	@Test
@@ -54,6 +56,7 @@ public class TasksTest {
 		}
 	}
 	
+
 	@SuppressWarnings("deprecation")
 	@Test
 	public void naoDeveSalvarTarefaSemDescricao() throws MalformedURLException {
@@ -79,6 +82,7 @@ public class TasksTest {
 		}
 	}
 	
+
 	@SuppressWarnings("deprecation")
 	@Test
 	public void naoDeveSalvarTarefaSemData() throws MalformedURLException {
@@ -103,6 +107,7 @@ public class TasksTest {
 			driver.quit();
 		}
 	}
+	
 	
 	@SuppressWarnings("deprecation")
 	@Test
