@@ -49,7 +49,7 @@ public class TasksTest {
 			
 			// validar mensagem de sucesso
 			String message = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Success!", message);
+			Assert.assertEquals("Successo!", message);
 		} finally {
 			//fecha navegador
 			driver.quit();
