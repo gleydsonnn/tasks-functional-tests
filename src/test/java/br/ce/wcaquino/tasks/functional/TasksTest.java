@@ -78,7 +78,7 @@ public class TasksTest {
 			// validar mensagem de sucesso
 			WebElement message = driver.findElement(By.id("message"));
 			String text = message.getText();
-			Assert.assertEquals("Fill the task description", message);
+			Assert.assertEquals("Fill the task description", text);
 		} finally {
 			//fecha navegador
 			driver.quit();
@@ -105,7 +105,7 @@ public class TasksTest {
 			// validar mensagem de sucesso
 			WebElement message = driver.findElement(By.id("message"));
 			String text = message.getText();
-			Assert.assertEquals("Fill the due date", message);
+			Assert.assertEquals("Fill the due date", text);
 		} finally {
 			//fecha navegador
 			driver.quit();
@@ -135,7 +135,7 @@ public class TasksTest {
 	 		// validar mensagem de sucesso
 			WebElement message = driver.findElement(By.id("message"));
 			String text = message.getText();
-	 		Assert.assertEquals("Due date must not be in past", message);
+	 		Assert.assertEquals("Due date must not be in past", text);
 	 	} finally {
 	 		//fecha navegador
 	 		driver.quit();
